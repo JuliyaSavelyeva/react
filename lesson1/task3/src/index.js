@@ -4,11 +4,15 @@ import './style.css';
 
 const rootElement = document.querySelector('#root');
 
-const elem = (
-  <div className="greeting">
-    <h1 className="greeting__title">Hello, world!</h1>
-    <p className="greeting__text">I'm learning React</p>
-  </div>
-);
-console.log(elem);
-ReactDOM.render(elem, rootElement);
+const renderGreeting = elem => {
+  const element = (
+    <div className="greeting">
+      <h1 className="greeting__title">Hello, world!</h1>
+      <p className="greeting__text">I'm learning React</p>
+    </div>
+  );
+
+  ReactDOM.render(element, rootElement);
+};
+
+renderGreeting(rootElement);
