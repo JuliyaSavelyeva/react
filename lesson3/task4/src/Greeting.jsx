@@ -5,11 +5,9 @@ import moment from "moment";
 const Greeting = props => {
   const formatDate = date => moment(date).format();
   const timeString = formatDate(props.birthDate);
-  console.log(timeString);
   const data = `${timeString.substr(0, 4)}${timeString.substr(5, 2)}${timeString.substr(8, 2)}`;
-  console.log(data);
   const time = moment(data, "YYYYMMDD").fromNow();
-  console.log(time);
+
   const getTime = time => {
     if (time.includes('years')) {
        return Number.parseInt(time);
