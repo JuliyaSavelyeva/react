@@ -5,14 +5,15 @@ const formatDate = date => moment(date).format("DD MMM YY");
 
 
 const Profile = props => {
+  console.log(props);
   return (
     <div className="greeting">
       <div className="profile__name">
-    {props.user.firstName} {props.user.lastName}
-    </div>
-    <div className="profile__birth">
-    Was born {formatDate(props.user.birthDate)} in {props.user.birthPlace}
-    </div>
+     {props.userData.firstName} {props.userData.lastName}
+      </div>
+      <div className="profile__birth">
+      Was born {formatDate(props.userData.birthDate)} in {props.userData.birthPlace}
+      </div>
     </div>
   );
 }
