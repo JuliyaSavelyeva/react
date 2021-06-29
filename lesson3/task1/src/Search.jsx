@@ -1,9 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
-import './search.scss';
-
-const rootElement = document.querySelector('#root');
 
 const SearchField = props => {
   console.log(props);
@@ -19,4 +14,4 @@ const SearchField = props => {
   return element;
 };
 
-ReactDOM.render(<SearchField name="Bob" />, rootElement);
+export default SearchField;

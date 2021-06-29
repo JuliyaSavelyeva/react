@@ -6,14 +6,14 @@ const webpack = require('webpack');
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
   const config = {
-    entry: './src/index.js',
+    entry: './src/index.jsx',
     output: {
       filename: 'bundle.js',
     },
     module: {
       rules: [
         {
-          test: /.js$/,
+          test: /.jsx?$/,
           use: ['babel-loader'],
         },
         {
@@ -22,19 +22,6 @@ module.exports = (env, argv) => {
             isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
             'css-loader',
             'sass-loader',
-          ],
-        },
-        {
-          test: /.(jpg|png)$/,
-          use: [
-            {
-              loader: 'url-loader',
-              options: {
-                limit: 8192,
-                name: '[name].[ext]',
-                outputPath: 'images',
-              },
-            },
           ],
         },
       ],
@@ -46,6 +33,9 @@ module.exports = (env, argv) => {
         template: './src/index.html',
       }),
     ],
+    resolve: {
+      extensions: ['.js', '.jsx'],
+    },
     devServer: {
       hot: true,
     },
