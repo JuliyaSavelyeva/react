@@ -11,13 +11,11 @@ class Toggler extends React.Component {
 
   toggler = () => {
     if(this.state.textContent === 'Off') {
-      console.log(this.state.textContent)
       this.setState({
         textContent: 'On',
       })
     }
     if(this.state.textContent === 'On') {
-      console.log(this.state.textContent)
       this.setState({
         textContent: 'Off',
       })
