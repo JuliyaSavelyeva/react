@@ -8,25 +8,28 @@ class Toggler extends React.Component {
       textContent: 'Off',
     }
   }
-  toggler(e) {
-    if(e.target.textContent === 'Off') {
+
+  toggler = () => {
+    if(this.state.textContent === 'Off') {
+      console.log(this.state.textContent)
       this.setState({
         textContent: 'On',
       })
     }
-    if(e.target.textContent === 'On') {
+    if(this.state.textContent === 'On') {
+      console.log(this.state.textContent)
       this.setState({
         textContent: 'Off',
       })
     }
   }
-  
+
   render() {
     return (
       <button 
       className="toggler" 
-      onClick={e => this.toggler(e)}>
-        {this.state.textContent}
+      onClick={this.toggler}>
+      {this.state.textContent}
     </button>
     );
   }
