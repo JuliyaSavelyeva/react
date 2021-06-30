@@ -1,6 +1,6 @@
 import React from 'react';
 
-const coral = 'Сoral';
+const CORAL = 'Сoral';
 const aqua = 'Aqua';
 const bisque = 'Bisque';
 
@@ -33,7 +33,7 @@ class ColorPicker extends React.Component {
       <div>
         <button 
           className="picker__button picker__button_coral"
-          onMouseEnter={this.setText.bind(this, coral)}
+          onMouseEnter={this.setText.bind(this, CORAL)}
           onMouseLeave={this.deleteText}>
         </button>
         <button 
