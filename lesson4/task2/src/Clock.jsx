@@ -30,7 +30,7 @@ class Clock extends Component {
           {this.props.location}
         </div>
         <div className="clock__time">
-          {this.state.time.toLocaleTimeString('en-US')}
+          {this.state.time.toLocaleTimeString()}
         </div>
       </div>
     );
@@ -38,3 +38,5 @@ class Clock extends Component {
 }
 
 export default Clock;
+
+// const formatDate = date => moment(date).format('h:mm:ss A');
