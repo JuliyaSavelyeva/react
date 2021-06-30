@@ -30,21 +30,23 @@ class ColorPicker extends React.Component {
       <div className="picker__title">
        {this.state.text}
       </div>
-      <button 
-        className="picker__button picker__button_coral"
-        onMouseEnter={this.setText.bind(this, coral)}
-        onMouseLeave={this.deleteText.bind(this)}>
-      </button>
-      <button 
-        class="picker__button picker__button_aqua" 
-        onMouseOver={this.setText.bind(this, aqua)}
-        onMouseOut={this.deleteText.bind(this)}>
-      </button>
-      <button 
-        class="picker__button picker__button_bisque" 
-        onMouseOver={this.setText.bind(this, bisque)}
-        onMouseOut={this.deleteText.bind(this)}>
-      </button>
+      <div>
+        <button 
+          className="picker__button picker__button_coral"
+          onMouseEnter={this.setText.bind(this, coral)}
+          onMouseLeave={this.deleteText.bind(this)}>
+        </button>
+        <button 
+          class="picker__button picker__button_aqua" 
+          onMouseOver={this.setText.bind(this, aqua)}
+          onMouseOut={this.deleteText.bind(this)}>
+        </button>
+        <button 
+          class="picker__button picker__button_bisque" 
+          onMouseOver={this.setText.bind(this, bisque)}
+          onMouseOut={this.deleteText.bind(this)}>
+        </button>
+      </div>
     </div>
     );
   }
