@@ -10,16 +10,14 @@ class Toggler extends React.Component {
   }
 
   toggler = () => {
-    if(this.state.textContent === 'Off') {
-      this.setState({
-        textContent: 'On',
+    this.state.textContent === 'Off'
+    ? this.setState({
+          textContent: 'On',
       })
-    }
-    if(this.state.textContent === 'On') {
-      this.setState({
-        textContent: 'Off',
-      })
-    }
+    : this.setState({
+      textContent: 'Off',
+  })
+    
   }
 
   render() {
@@ -34,3 +32,14 @@ class Toggler extends React.Component {
 }
 
 export default Toggler;
+
+// if(this.state.textContent === 'Off') {
+    //   this.setState({
+    //     textContent: 'On',
+    //   })
+    // }
+    // if(this.state.textContent === 'On') {
+    //   this.setState({
+    //     textContent: 'Off',
+    //   })
+    // }

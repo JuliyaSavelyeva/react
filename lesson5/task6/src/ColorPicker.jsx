@@ -34,17 +34,17 @@ class ColorPicker extends React.Component {
         <button 
           className="picker__button picker__button_coral"
           onMouseEnter={this.setText.bind(this, coral)}
-          onMouseLeave={this.deleteText.bind(this)}>
+          onMouseLeave={this.deleteText}>
         </button>
         <button 
-          class="picker__button picker__button_aqua" 
+          className="picker__button picker__button_aqua" 
           onMouseOver={this.setText.bind(this, aqua)}
-          onMouseOut={this.deleteText.bind(this)}>
+          onMouseOut={this.deleteText}>
         </button>
         <button 
-          class="picker__button picker__button_bisque" 
+          className="picker__button picker__button_bisque" 
           onMouseOver={this.setText.bind(this, bisque)}
-          onMouseOut={this.deleteText.bind(this)}>
+          onMouseOut={this.deleteText}>
         </button>
       </div>
     </div>
