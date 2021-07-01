@@ -1,6 +1,6 @@
 import React from 'react';
 
-const coral = 'Сoral';
+const coral = 'Coral';
 const aqua = 'Aqua';
 const bisque = 'Bisque';
 
@@ -9,18 +9,18 @@ class ColorPicker extends React.Component {
     super(props);
 
     this.state = {
-      text: '',
+      pickerTitle: '',
     }
   }
   setText = color => {
     this.setState({
-      text: color,
+      pickerTitle: color,
     })
   }
 
   deleteText = () => {
     this.setState({
-      text: '',
+      pickerTitle: this.stateText,
     })
   }
 
@@ -28,12 +28,12 @@ class ColorPicker extends React.Component {
     return (
     <div>
       <div className="picker__title">
-       {this.state.text}
+       {this.state.pickerTitle}
       </div>
       <div>
         <button 
           className="picker__button picker__button_coral"
-          onMouseOver={() => this.setText(coral)}
+          onMouseOver={this.setText.bind(this, coral)}
           onMouseOut={this.deleteText}>
         </button>
         <button 
@@ -53,3 +53,13 @@ class ColorPicker extends React.Component {
 }
 
 export default ColorPicker;
+
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+const instance = new Rectangle(50,60);
+console.log(instance)
+
