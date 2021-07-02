@@ -20,7 +20,7 @@ class ColorPicker extends React.Component {
 
   deleteText = () => {
     this.setState({
-      pickerTitle: this.stateText,
+      pickerTitle: this.setState,
     })
   }
 
@@ -54,12 +54,9 @@ class ColorPicker extends React.Component {
 
 export default ColorPicker;
 
-class Rectangle {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
-  }
-}
-const instance = new Rectangle(50,60);
-console.log(instance)
+const a = 'aaa'.split('');
+console.log({});
+console.log(a);
 
+const o = ['a', 'b'];
+console.log(a.toString());
