@@ -7,13 +7,13 @@ class Status extends React.Component {
     super(props);
 
     this.state = {
-      isOnline: false,
+      isOnline: props.isOnline,
     };
   }
 
   handlerReconnect = () => {
     this.setState({
-      isOnline: true,
+      isOnline: !this.state.isOnline,
     });
   };
 
