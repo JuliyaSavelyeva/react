@@ -1,8 +1,8 @@
 import React from 'react';
 import Message from './Message';
 
-const text1 = 'Hello World!';
-const text2 = 'Another exciting text';
+const text1 = 'Hello, World!';
+const text2 = 'Another exciting text.';
 
 class Page extends React.Component {
   state = {
