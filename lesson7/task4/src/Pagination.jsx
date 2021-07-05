@@ -11,7 +11,7 @@ const Pagination = ({ goPrev, goNext, currentPage, totalItems, itemsPerPage }) =
           ←
         </button>
       ) : (
-        <button className="btn" onClick={goPrev} disabled={true}></button>
+        <button className="btn" disabled={true}></button>
       )}
       <span className="pagination__page">{currentPage}</span>
 
@@ -20,7 +20,7 @@ const Pagination = ({ goPrev, goNext, currentPage, totalItems, itemsPerPage }) =
           →
         </button>
       ) : (
-        <button className="btn" onClick={goNext} disabled={true}></button>
+        <button className="btn" disabled={true}></button>
       )}
     </div>
   );
