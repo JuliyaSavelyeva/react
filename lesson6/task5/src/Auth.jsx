@@ -31,17 +31,13 @@ class Auth extends React.Component {
   };
 
   handleSpinner = () => {
-    const id = setInterval(() => {
-      this.setState({
-        spinner: true,
-        isLoggedIn: false,
-      });
-    }, 0);
+    this.setState({
+      spinner: true,
+      isLoggedIn: false,
+    });
     setTimeout(() => {
-      clearInterval(id);
       this.setState({
         spinner: false,
-        isLoggedIn: false,
       });
     }, 2000);
   };
