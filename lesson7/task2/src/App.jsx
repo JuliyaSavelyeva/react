@@ -1,5 +1,5 @@
 import React from 'react';
-import UserList from './UserList.jsx';
+import UsersList from './UsersList.jsx';
 
 const users = [
   {
@@ -24,6 +24,6 @@ const users = [
   },
 ];
 
-const App = () => <UserList users={users} />;
+const App = () => <UsersList users={users} />;
 
 export default App;
