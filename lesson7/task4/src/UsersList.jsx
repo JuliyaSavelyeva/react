@@ -15,7 +15,7 @@ class UsersList extends React.Component {
   };
 
   goPrev = () => {
-    from = from - numberPerPage;
+    from -= numberPerPage;
     to = from + numberPerPage;
 
     this.setState({
@@ -26,7 +26,7 @@ class UsersList extends React.Component {
 
   goNext = () => {
     from = to;
-    to = to + numberPerPage;
+    to += numberPerPage;
 
     this.setState({
       currentPage: this.state.currentPage + 1,
