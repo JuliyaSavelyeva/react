@@ -14,14 +14,46 @@ class UsersList extends React.Component {
       user => user.name.toLowerCase() === event.target.value.toLowerCase(),
     );
 
+    // this.setState({
+    //   value: event.target.value,
+    //   count: this.filteredUsers.length > 0 ? this.filteredUsers.length : 0,
+    //   users: !event.target.value // || this.filteredUsers.length === 0
+    //     ? this.props.users
+    //     : this.filteredUsers,
+    // });
+
+    if (!event.target.value) {
+      this.count = 0;
+      this.users = this.props.users;
+    } else if (this.filteredUsers.length > 0) {
+      this.count = this.filteredUsers.length;
+      this.users = this.filteredUsers;
+    } else {
+      this.count = this.state.count;
+      this.users = this.state.users;
+    }
+
     this.setState({
       value: event.target.value,
-      count: this.filteredUsers.length > 0 ? this.filteredUsers.length : 0,
-      users: !event.target.value // || this.filteredUsers.length === 0
-        ? this.props.users
-        : this.filteredUsers,
+      count: this.count,
+      users: this.users,
     });
   };
+
+  //   this.setState({
+  //     value: event.target.value,
+  //     count: !event.target.value
+  //       ? 0
+  //       : this.filteredUsers.length > 0
+  //       ? this.filteredUsers.length
+  //       : this.state.count,
+  //     users: !event.target.value
+  //       ? this.props.users
+  //       : event.target.value && this.filteredUsers.length === 0
+  //       ? this.state.users
+  //       : this.filteredUsers,
+  //   });
+  // };
 
   render() {
     return (
