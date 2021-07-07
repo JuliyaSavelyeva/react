@@ -17,10 +17,9 @@ class UsersList extends React.Component {
     this.setState({
       value: event.target.value,
       count: this.filteredUsers.length > 0 ? this.filteredUsers.length : 0,
-      users:
-        !event.target.value || this.filteredUsers.length === 0
-          ? this.props.users
-          : this.filteredUsers,
+      users: !event.target.value // || this.filteredUsers.length === 0
+        ? this.props.users
+        : this.filteredUsers,
     });
   };
 
