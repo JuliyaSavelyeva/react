@@ -12,7 +12,7 @@ class App extends React.Component {
   }
 
   fetchUserData = userId => {
-    const userUrl = `http://api.github.com/users/${userId}`;
+    const userUrl = `https://api.github.com/users/${userId}`;
     fetch(userUrl)
       .then(response => response.json())
       .then(userData =>
