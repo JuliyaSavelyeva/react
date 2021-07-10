@@ -8,6 +8,8 @@ const Expand = ({ children, title, onToggleButton, isShow }) => {
     <i className="fas fa-chevron-up"></i>
   );
 
+  const mainContent = isShow ? children : null;
+
   return (
     <div className="expand border">
       <div className="expand__header">
@@ -16,7 +18,7 @@ const Expand = ({ children, title, onToggleButton, isShow }) => {
           {arrow}
         </button>
       </div>
-      {isShow && <div className="expand__content">{children}</div>}
+      <div className="expand__content">{mainContent}</div>
     </div>
   );
 };
