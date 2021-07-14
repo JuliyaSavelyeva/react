@@ -19,7 +19,7 @@ const ConnectionStatus = () => {
       window.removeEventListener('online', onOnlineSatus);
       window.removeEventListener('offline', onOfflineSatus);
     };
-  }, [status]);
+  }, []);
 
   return status ? (
     <div className="status">online</div>
